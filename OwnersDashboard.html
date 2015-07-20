@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meal Ticket &middot; Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/lib/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" type="text/css" href="styles/lib/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<div class="nav">
+    <div class="navleft">
+        <a href="#"><img src="images/ticket-stub.jpg" alt="Meal Ticket icon">Meal Ticket</a>
+    </div>
+    <div class="navright">
+        <ul>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i>Profile</a></li>
+            <li><a href="OwnerLogin.html"><i class="glyphicon glyphicon-log-out"></i>Logout</a></li>
+        </ul>
+    </div>
+</div>
+<div id="tabbedpane">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#reservations">
+            <h4><span class="heading1">Reservations</span></h4></a></li>
+        <li><a data-toggle="tab" href="#tables"><h4><span class="heading1">Tables</span></h4></a></li>
+        <li><a data-toggle="tab" href="#settings"><h4><span class="heading1">Settings</span></h4></a></li>
+        <li><a data-toggle="tab" href="#contacts"><h4><span class="heading1">Contacts</span></h4></a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="reservations" class="tab-pane fade in active">
+            <table id="rsvnTable" class="table table-striped" >
+                <thead>
+                <tr>
+                    <th>Confirmation #</th>
+                    <th>Name</th>
+                    <th>Reservation Status</th>
+                    <th>Reservation Date & Time</th>
+                    <th>Pary Size</th>
+                    <th>Table#</th>
+                    <th>Save Changes</th>
+                    <th>Delete Reservation</th>
+                    <th>Contact</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td contenteditable="true">RAND123</td>
+                    <td contenteditable="true">Mr. Greenberg</td>
+                    <td contenteditable="true">Waitlisted</td>
+                    <td contenteditable="true">10/22/2015 1:30PM</td>
+                    <td contenteditable="true">3</td>
+                    <td contenteditable="true">5</td>
+                    <td><input type="button" class="btn btn-default" value="Save">
+                        <input type="button" class="btn btn-default" value="Cancel"></td>
+                    <td><input type="button" class="btn btn-default" value="Delete"></td>
+                    <td><input type="button" class="btn btn-default" value="Send email"></td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">RAND345</td>
+                    <td contenteditable="true">Mr. Fishburne</td>
+                    <td contenteditable="true">Confirmed</td>
+                    <td contenteditable="true">10/22/2015 1:30PM</td>
+                    <td contenteditable="true">3</td>
+                    <td contenteditable="true">5</td>
+                    <td><input type="button" class="btn btn-default" value="Save">
+                        <input type="button" class="btn btn-default" value="Cancel"></td>
+                    <td><input type="button" class="btn btn-default" value="Delete"></td>
+                    <td><input type="button" class="btn btn-default" value="Send email"></td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">RAND323</td>
+                    <td contenteditable="true">Lawrence</td>
+                    <td contenteditable="true">Confirmed</td>
+                    <td contenteditable="true">10/22/2015 1:30PM</td>
+                    <td contenteditable="true">4</td>
+                    <td contenteditable="true">2</td>
+                    <td><input type="button" class="btn btn-default" value="Save">
+                        <input type="button" class="btn btn-default" value="Cancel"></td>
+                    <td><input type="button" class="btn btn-default" value="Delete"></td>
+                    <td><input type="button" class="btn btn-default" value="Send email"></td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="button" class="btn btn-link" value="Add row" onclick="addReservationRow()">
+        </div>
+
+        <div id="tables" class="tab-pane fade">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Table #</th>
+                    <th>Name</th>
+                    <th>Reservation Status</th>
+                    <th>Reservation Date & Time</th>
+                    <th>Pary Size</th>
+                    <th>Confirmation number</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>Available</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lawrence</td>
+                    <td>Reserved</td>
+                    <td>10/22/2015 1:30PM</td>
+                    <td>4</td>
+                    <td>RAND323</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>Available</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>Available</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mr. Fishburne</td>
+                    <td>Reserved</td>
+                    <td>10/22/2015 1:30PM</td>
+                    <td>3</td>
+                    <td>RAND345</td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+
+        <div id="settings" class="tab-pane fade">
+            <h4><span class="heading">Account Details</span></h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Email:</th>
+                    <td contenteditable="true">abc@domain.com</td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td contenteditable="true">pass</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">Receive notifications</td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-default" value="Update"></td>
+                    <td><input type="button" class="btn btn-default" value="Cancel"></td>
+                </tr>
+
+            </table>
+            <h4><span class="heading">Personal Details</span></h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Name:</th>
+                    <td contenteditable="true">Narasimha</td>
+                </tr>
+                <tr>
+                    <th>Restaurant phone number:</th>
+                    <td contenteditable="true">(999)999-9999</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="contacts" class="tab-pane fade">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone number</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Lawrence</td>
+                    <td>(237)428-4484</td>
+                    <td>llaw@gmail.com</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="scripts/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="scripts/lib/bootstrap.min.js"></script>
+</body>
+</html>
