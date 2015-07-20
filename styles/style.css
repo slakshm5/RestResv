@@ -126,10 +126,9 @@ button:hover{
     overflow-y: auto;
 }
 #loginForm{
-    padding:0;
-    position: relative;
+    padding: 5%;
     margin-left: 50%;
     width: 70%;
     border: 1px solid lightblue;
-
+    padding-top: 2%;
 }
