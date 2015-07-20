@@ -27,16 +27,22 @@
     </div>
 </div>
 
-<div class="container">
-    <div id="details"></div>
-    <div class="formrow">
+<div class="centercontainer">
+    <div id="details">
+        <h5><span class="heading">Restaurant Hours</span></h5>
+        <label class="hours">Monday to Thursday: 9 am to 10pm</label>
+        <label class="hours">Friday, Saturday: 9 am to 11.30pm</label>
+        <label class="hours">Sunday: 11 am to 9pm</label>
+        <label class="hours">Phone: (999)123-4567</label>
+    </div>
+    <div id="modifyform">
         <h4><span class="heading"> Modify an existing reservation</span></h4>
         <div id="confnum">
             <div class="form-group">
                 <label for="conf" class="control-label">Confirmation Number:</label>
                 <input type="text" id="conf" class="form-control" placeholder="CONF123" autofocus="autofocus">
             </div>
-            <input type="button" class="btn btn-default" onclick="retrieveRsvnDetails()" value="Submit"></input>
+            <input type="button" class="btn btn-default" onclick="retrieveRsvnDetails()" value="Submit">
         </div>
         <div id="rsvnupdate" display="none">
             <form action = "#" method="post">

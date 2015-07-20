@@ -18,8 +18,12 @@ function initialize() {
 
 // To add the marker to the map, call setMap();
     marker.setMap(map);
+    google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = marker.url;
+    });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 function addReservationRow(){
     var table = document.getElementById("rsvnTable");
