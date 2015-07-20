@@ -84,3 +84,7 @@ function delReservationRow(){
     var rowNum = this.parentNode.parentNode.rowIndex;
     alert(rowNum);
 }
+function retrieveRsvnDetails(){
+    document.getElementById(confnum).setAttribute(display,"none");
+    document.getElementById(rsvnupdate).setAttribute(display,"block");
+}
